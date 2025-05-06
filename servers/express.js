@@ -19,8 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // CORS middleware
 app.use(credentials);
-app.options('/{*path}', cors(corsOptions)); // Preflight cors
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 // Middleware for auth
 app.use(sessionMiddleware);
