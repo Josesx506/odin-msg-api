@@ -17,8 +17,9 @@ const corsOptions = {
   origin: (origin, callback) => {
     if (!origin) return callback(null, true); // allow Postman, etc.
 
-    const isWhitelisted = allowedOrigins.includes(origin) ||
-      /^https:\/\/odin-msg-client-.*\.vercel\.app$/.test(origin); // preview links
+    const isWhitelisted = allowedOrigins.includes(origin) 
+    // ||
+    //   /^https:\/\/odin-msg-client-.*\.vercel\.app$/.test(origin); // preview links
 
     if (isWhitelisted) {
       callback(null, true);
